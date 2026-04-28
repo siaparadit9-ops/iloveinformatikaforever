@@ -564,4 +564,11 @@ body {
         align-items: flex-start;
         gap: 16px;
     }
+
+    #alertBox{
+        position: fixed;
+        top: 20px;
+        left: 50px;
+        transform: translateX(-50%);
+        z-index: 999;
 }
