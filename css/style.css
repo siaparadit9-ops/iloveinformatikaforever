@@ -598,14 +598,22 @@ input {
 
   /* ===== TAMBAHAN CSS UNTUK LOGIN DI TAMPILAN MOBILE ===== */
   #tmNavbar .navbar-text {
-      margin-top: 10px;
-      margin-bottom: 0px;
+      margin-top: 15px;
+      margin-bottom: 5px;
       text-align: center;
       width: 100%;
+      font-size: 14px;
   }
   #tmNavbar .navbar-btn {
       margin-top: 5px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      width: 100%; /* Membuat tombol memanjang penuh di HP */
+  }
+  /* Membuat tombol memanjang penuh di tampilan mobile */
+  .nav-cta {
+      width: 100%;
+      padding: 12px; /* Lebih tinggi agar mudah ditekan di HP */
+      text-align: center;
   }
   /* ===== AKHIR TAMBAHAN CSS MOBILE ===== */
 
