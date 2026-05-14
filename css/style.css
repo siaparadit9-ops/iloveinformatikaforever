@@ -467,6 +467,30 @@ input {
     box-shadow: 0 8px 25px rgba(79, 172, 254, 0.6); /* Bayangan membesar dan lebih terang */
 }
 
+/* Style Tombol Instagram - Gradient Khas IG */
+.navbar-inverse .navbar-nav > li > a.instagram-btn {
+    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045); /* Warna gradien khas Instagram */
+    border: none; /* Menghapus border bawaan template */
+    border-radius: 30px; /* Membuat bentuk kapsul */
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 15px rgba(253, 29, 29, 0.3); /* Bayangan kemerahan */
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* Efek saat kursor diarahkan ke tombol Instagram */
+.navbar-inverse .navbar-nav > li > a.instagram-btn:hover,
+.navbar-inverse .navbar-nav > li > a.instagram-btn:focus {
+    background: linear-gradient(45deg, #fcb045, #fd1d1d, #833ab4); /* Gradien terbalik saat hover */
+    color: #fff;
+    transform: translateY(-3px); /* Tombol sedikit naik */
+    box-shadow: 0 8px 25px rgba(253, 29, 29, 0.5); /* Bayangan membesar */
+}
 /* ===== AKHIR TAMBAHAN CSS ===== */
 
 
