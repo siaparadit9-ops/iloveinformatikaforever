@@ -425,6 +425,35 @@ input {
     text-align: center;
 }
 
+/* ===== TAMBAHAN CSS UNTUK LOGIN DI KANAN ===== */
+#tmNavbar .navbar-text {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #9d9d9d;
+}
+
+#tmNavbar .navbar-btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.nav-cta {
+    background-color: #67B6F4; 
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+}
+.nav-cta:hover {
+    background-color: #519fd4; 
+    color: white;
+}
+/* ===== AKHIR TAMBAHAN CSS ===== */
+
+
 /* Media Queries
 ----------------------*/
 
@@ -550,6 +579,20 @@ input {
     background: #383E4C;
   }
   .navbar-inverse .navbar-nav > li > a { font-size: 16px; }
+
+  /* ===== TAMBAHAN CSS UNTUK LOGIN DI TAMPILAN MOBILE ===== */
+  #tmNavbar .navbar-text {
+      margin-top: 10px;
+      margin-bottom: 0px;
+      text-align: center;
+      width: 100%;
+  }
+  #tmNavbar .navbar-btn {
+      margin-top: 5px;
+      margin-bottom: 10px;
+  }
+  /* ===== AKHIR TAMBAHAN CSS MOBILE ===== */
+
   .container {
     margin-left: 0;
     margin-right: 0;
