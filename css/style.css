@@ -639,6 +639,12 @@ input {
       padding: 12px; /* Lebih tinggi agar mudah ditekan di HP */
       text-align: center;
   }
+  /* Style tombol Instagram di layar HP */
+.navbar-inverse .navbar-nav > li > a.instagram-btn {
+    border-radius: 30px;
+    margin: 5px 0;
+    text-align: center;
+}
   /* ===== AKHIR TAMBAHAN CSS MOBILE ===== */
 
   .container {
