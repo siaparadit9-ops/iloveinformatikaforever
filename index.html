@@ -1,96 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SoraiSenja</title>
+    <title>SoraiSenja</title>
 <!--
 Conquer Template
 http://www.templatemo.com/tm-476-conquer
 -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>                        
-				</button>
-			</div>   
-			<div class="single-page-nav sticky-wrapper" id="tmNavbar">
-				<ul class="nav navbar-nav">
-					<li><a href="#section1">Homepage</a></li>
-					<li><a href="#section2">About Us</a></li>
-					<li><a href="#section3">Services</a></li>
-					<li><a href="#section4">Contact</a></li>
-					<p id="userInfo">Belum login</p>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+            </div>   
+            <div class="single-page-nav sticky-wrapper" id="tmNavbar">
+                
+                <!-- Menu Kiri -->
+                <ul class="nav navbar-nav">
+                    <li><a href="#section1">Homepage</a></li>
+                    <li><a href="#section2">About Us</a></li>
+                    <li><a href="#section3">Services</a></li>
+                    <li><a href="#section4">Contact</a></li>
+                    <li><a href="https://www.instagram.com/anwarzainna?igsh=MWg2b2F2djNvbHBldA==" class="external" title="Instagram anwarzainna" target="_blank">Instagram</a></li>
+                </ul>
 
-	<div id="authArea">
-		<button onclick="goLogin()" class="nav-cta">Login</button>
-	</div>
-					<li><a href="https://www.instagram.com/anwarzainna?igsh=MWg2b2F2djNvbHBldA==" class="external" title="Instagram anwarzainna" target="_blank">Instagram</a></li>
-				</ul>
-			</div>   
-		</div>
-	</nav>    
+                <!-- Menu Kanan (Login Dipindahkan ke Sini) -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><p id="userInfo" class="navbar-text">Belum login</p></li>
+                    <li>
+                        <div id="authArea">
+                            <button onclick="goLogin()" class="nav-cta navbar-btn">Login</button>
+                        </div>
+                    </li>
+                </ul>
 
-	<div id="section1">
-		<header id="header-area" class="intro-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 text-center">
-						<div class="header-content">
-							<h1>Bel Jam Terakhir</h1>
-							<h4>Pelajaran Berharga di Bangku Remaja</h4>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-	</div>
-	<div id="section2">
-		<!-- Start Feature Area -->
-		<section id="feature-area" class="about-section">
-			<div class="container">
-				<div class="row text-center inner">
-					<div class="col-sm-4">
-						<div class="feature-content">
-							<img src="img/1-1.jpg" alt="Image">
-							<h2 class="feature-content-title green-text">Aurora di Langit Nordik</h2>
-							<p class="feature-content-description">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.
-							</p>
-							<a href="#" class="feature-content-link green-btn">Tombol Hijau</a>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="feature-content">
-							<img src="img/P5-2.jpeg" alt="Image">
-							<h2 class="feature-content-title blue-text">Gemerlap Jembatan Ampera</h2>
-							<p class="feature-content-description">Conquer Template is provided by templatemo for free of charge. You can use this template for any kind of website. No credit link is required. All images by <a href="http://unsplash.com" target="_parent">Unsplash</a>. Thank you for visiting our website. Please come again!</p>                    
-							<a href="#" class="feature-content-link blue-btn">Selengkapnya</a>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="feature-content">
-							<img src="img/P5-3.jpeg" alt="Image">
-							<h2 class="feature-content-title red-text">Gemerincing Rel Kereta</h2>
-							<p class="feature-content-description">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.
-							</p>
-							<a href="#" class="feature-content-link red-btn">Tombol Merah</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End Feature Area -->
+            </div>   
+        </div>
+    </nav>    
 
-		<!-- Start Featured Piece / Video Area -->
+    <div id="section1">
+        <header id="header-area" class="intro-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="header-content">
+                            <h1>Bel Jam Terakhir</h1>
+                            <h4>Pelajaran Berharga di Bangku Remaja</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div id="section2">
+        <!-- Start Feature Area -->
+        <section id="feature-area" class="about-section">
+            <div class="container">
+                <div class="row text-center inner">
+                    <div class="col-sm-4">
+                        <div class="feature-content">
+                            <img src="img/1-1.jpg" alt="Image">
+                            <h2 class="feature-content-title green-text">Aurora di Langit Nordik</h2>
+                            <p class="feature-content-description">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.
+                            </p>
+                            <a href="#" class="feature-content-link green-btn">Tombol Hijau</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="feature-content">
+                            <img src="img/P5-2.jpeg" alt="Image">
+                            <h2 class="feature-content-title blue-text">Gemerlap Jembatan Ampera</h2>
+                            <p class="feature-content-description">Conquer Template is provided by templatemo for free of charge. You can use this template for any kind of website. No credit link is required. All images by <a href="http://unsplash.com" target="_parent">Unsplash</a>. Thank you for visiting our website. Please come again!</p>                    
+                            <a href="#" class="feature-content-link blue-btn">Selengkapnya</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="feature-content">
+                            <img src="img/P5-3.jpeg" alt="Image">
+                            <h2 class="feature-content-title red-text">Gemerincing Rel Kereta</h2>
+                            <p class="feature-content-description">Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.
+                            </p>
+                            <a href="#" class="feature-content-link red-btn">Tombol Merah</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Feature Area -->
+
+        <!-- Start Featured Piece / Video Area -->
             <section class="featured-piece" style="padding: 80px 0; background-color: #f4f4f4;">
                 <div class="container">
                     <div class="row">
@@ -98,7 +106,6 @@ http://www.templatemo.com/tm-476-conquer
                         <div class="col-md-7">
                             <div class="featured-image-wrapper">
                                 <div class="featured-image">
-                                    <!-- Kode YouTube Anda di sini (width diganti 100% agar responsive) -->
                                     <iframe width="100%" height="400" src="https://www.youtube.com/embed/0r_X7eulEu4" title="KEBANGKITAN DAN KERUNTUHAN ZAMAN KEEMASAN ISLAM | 4K | DOKUMENTER PENDEK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                                 <div class="featured-badge">New Arrival</div>
@@ -118,241 +125,234 @@ http://www.templatemo.com/tm-476-conquer
             </section>
             <!-- End Featured Piece / Video Area -->
 
-		<!-- Start Blog Area -->
-		<section id="blog-area">
-			<div class="container">
-				<div class="row text-center inner">
-					<div class="col-sm-6">
-						<div class="blog-content">
-							<img src="img/2-1.jpg" alt="Image">
-							<h2>Two Column Left Side</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros maximus, ut cursus sem euismod. Donec iaculis tristique odio at consectetur. Nullam dignissim varius suscipit. Sed in leo sit amet velit finibus pretium.<br><br>
-								Vestibulum vel mauris at erat mattis accumsan et ac lorem. Cras non venenatis orci, sed tincidunt massa. Duis nisl lectus, auctor eu sodales at, dignissim eu orci. Sed vitae venenatis magna, in blandit metus.</p>
-								<br>
+        <!-- Start Blog Area -->
+        <section id="blog-area">
+            <div class="container">
+                <div class="row text-center inner">
+                    <div class="col-sm-6">
+                        <div class="blog-content">
+                            <img src="img/2-1.jpg" alt="Image">
+                            <h2>Two Column Left Side</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros maximus, ut cursus sem euismod. Donec iaculis tristique odio at consectetur. Nullam dignissim varius suscipit. Sed in leo sit amet velit finibus pretium.<br><br>
+                                Vestibulum vel mauris at erat mattis accumsan et ac lorem. Cras non venenatis orci, sed tincidunt massa. Duis nisl lectus, auctor eu sodales at, dignissim eu orci. Sed vitae venenatis magna, in blandit metus.</p>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="blog-content">
+                                <img src="img/2-2.jpg" alt="Image">
+                                <h2>Two Column Right Side</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros maximus, ut cursus sem euismod. Donec iaculis tristique odio at consectetur. Nullam dignissim varius suscipit. Sed in leo sit amet velit finibus pretium.<br><br>
+                                Vestibulum vel mauris at erat mattis accumsan et ac lorem. Cras non venenatis orci, sed tincidunt massa. Duis nisl lectus, auctor eu sodales at, dignissim eu orci. Sed vitae venenatis magna, in blandit metus.</p>
+                                    <span><a href="#">read more</a></span><br>
+                                    <p id="blofr"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Blog Area -->
+            </div>
+            <div id="section3">
+                <!-- Start Services Area -->
+                <section id="services-area" class="services-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 text-center inner our-service">
+                                <div class="service">
+                                    <h1>Motivasi</h1>
+                                    <p>Pada suatu ketika, masalah silih berdatangan,menghujanimu tak berhenti, dan dirimu mulai bertanya
+                                        -tanya, "kapan cobaan ini akan berhenti Ya Allah, hamba telah lelah menjalani ini semua" 
+                                        Namun kamu menyadari bahwasannya, setiap masalah yang hadir bukanlah cara semesta menjatuhkanmu, melainkan proses menempa
+                                        agar kamu menjadi pribadi yang lebih tangguh. Di balik lelah yang terasa, selalu ada hikmah yang tersimpan rapi menanti
+                                        untuk dipetik pada waktu yang paling tepat. Percayalah, tidak ada badai yang datang tanpa membawa kesuburan bagi jiwa yang bersedia untuk bertahan.
+                                        "Allah tidak membebani seseorang melainkan sesuai dengan kesanggupannya".</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- End Services Area -->
 
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="blog-content">
-								<img src="img/2-2.jpg" alt="Image">
-								<h2>Two Column Right Side</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros maximus, ut cursus sem euismod. Donec iaculis tristique odio at consectetur. Nullam dignissim varius suscipit. Sed in leo sit amet velit finibus pretium.<br><br>
-								Vestibulum vel mauris at erat mattis accumsan et ac lorem. Cras non venenatis orci, sed tincidunt massa. Duis nisl lectus, auctor eu sodales at, dignissim eu orci. Sed vitae venenatis magna, in blandit metus.</p>
-									<span><a href="#">read more</a></span><br>
-									<p id="blofr"></p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- End Blog Area -->
-			</div>
-			<div id="section3">
-				<!-- Start Services Area -->
-				<section id="services-area" class="services-section">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-12 text-center inner our-service">
-								<div class="service">
-									<h1>Motivasi</h1>
-									<p>Pada suatu ketika, masalah silih berdatangan,menghujanimu tak berhenti, dan dirimu mulai bertanya
-										-tanya, "kapan cobaan ini akan berhenti Ya Allah, hamba telah lelah menjalani ini semua" 
-										Namun kamu menyadari bahwasannya, setiap masalah yang hadir bukanlah cara semesta menjatuhkanmu, melainkan proses menempa
-										agar kamu menjadi pribadi yang lebih tangguh. Di balik lelah yang terasa, selalu ada hikmah yang tersimpan rapi menanti
-										untuk dipetik pada waktu yang paling tepat. Percayalah, tidak ada badai yang datang tanpa membawa kesuburan bagi jiwa yang bersedia untuk bertahan.
-										"Allah tidak membebani seseorang melainkan sesuai dengan kesanggupannya".</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-					<!-- End Services Area -->
+                    <!-- Start Testimornial Area -->
+                    <section id="testimornial-area">
+                        <div class="container">
+                            <div class="row text-center">
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+                                    <div class="testimonial-content">
+                                        <img src="img/4-1.jpg" alt="Image">
+                                        <h2>Column One</h2>
+                                        <p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis. Fusce posuere egestas enim eu viverra.</p>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+                                    <div class="testimonial-content">
+                                        <img src="img/4-2.jpg" alt="Image">
+                                        <h2>Column Two</h2>
+                                        <p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis.</p>
+                                        <a href="#" class="content-link">read it</a>
+                                        <br>
+                                        <p id="redd"></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+                                    <div class="testimonial-content">
+                                        <img src="img/4-3.jpg" alt="Image">
+                                        <h2>Column Three</h2>
+                                        <p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis. Fusce posuere egestas enim eu viverra.</p>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+                                    <div class="testimonial-content">
+                                        <img src="img/4-4.jpg" alt="Image">
+                                        <h2>Column Four</h2>
+                                        <p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis.</p>
+                                        <a href="#" class="content-link">details</a>
+                                        <br>
+                                        <p id="dets"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="tm-box">
+                                        <img src="img/4-5.jpg" alt="Image" class="img-responsive">
+                                        <div class="tm-box-description">
+                                            <h2>One Big Column</h2>
+                                            <p class="tm-box-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros maximus, ut cursus sem euismod. Donec iaculis tristique odio at consectetur. Nullam dignissim varius suscipit. Sed in leo sit amet velit finibus pretium. Vivamus dictum nisi ac fermentum interdum. Vestibulum vel mauris at erat mattis accumsan et ac lorem. Cras non venenatis orci, sed tincidunt massa. Duis nisl lectus, auctor eu sodales at, dignissim eu orci. Sed vitae venenatis magna, in blandit metus. Praesent volutpat cursus rhoncus. Aenean arcu diam, suscipit ac neque in, sollicitudin convallis orci.</p>
+                                            <p class="tm-box-p">Fusce eu porta massa, sed tincidunt turpis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus a urna tellus. Integer pharetra vitae nisi et lacinia. Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque quis, maximus eget nisi.</p>
+                                            <a href="#" class="content-link">Read More</a>    
+                                        </div>                        
+                                    </div>                    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- End Testimornial Area -->
+                </div>
+                <div id="section4">
+                        <!-- Contact -->
+                        <section class="contact" id="contact">
+                            <div class="container">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.899581696843!2d110.3928100740499!3d-7.800455306955081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a57669d43fe55%3A0x75fae1bb400d4da5!2sSMA%20Negeri%208%20Yogyakarta!5e0!3m2!1sen!2sid!4v177812659811!5m2!1sen!2sid" 
+                                    width="600" 
+                                    height="450" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                        
+                                <div class="contact-grid">
+                                    <div class="contact-content">
+                                        <p class="text-label">Visit Our Atelier</p>
+                                        <h2 class="heading-display contact-title">
+                                            Experience Maison Dorée
+                                        </h2>
+                                        <p class="text-body contact-text">
+                                            We invite you to visit our atelier for a personal
+                                            consultation. Discover our collections in an intimate
+                                            setting and work with our designers to create something
+                                            truly unique.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
 
-					<!-- Start Testimornial Area -->
-					<section id="testimornial-area">
-						<div class="container">
-							<div class="row text-center">
-								<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-									<div class="testimonial-content">
-										<img src="img/4-1.jpg" alt="Image">
-										<h2>Column One</h2>
-										<p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis. Fusce posuere egestas enim eu viverra.</p>
-										<br>
-									</div>
-								</div>
-								<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-									<div class="testimonial-content">
-										<img src="img/4-2.jpg" alt="Image">
-										<h2>Column Two</h2>
-										<p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis.</p>
-										<a href="#" class="content-link">read it</a>
-										<br>
-										<p id="redd"></p>
-									</div>
-								</div>
-								<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-									<div class="testimonial-content">
-										<img src="img/4-3.jpg" alt="Image">
-										<h2>Column Three</h2>
-										<p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis. Fusce posuere egestas enim eu viverra.</p>
-										<br>
-									</div>
-								</div>
-								<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-									<div class="testimonial-content">
-										<img src="img/4-4.jpg" alt="Image">
-										<h2>Column Four</h2>
-										<p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis.</p>
-										<a href="#" class="content-link">details</a>
-										<br>
-										<p id="dets"></p>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-lg-12">
-									<div class="tm-box">
-										<img src="img/4-5.jpg" alt="Image" class="img-responsive">
-										<div class="tm-box-description">
-											<h2>One Big Column</h2>
-											<p class="tm-box-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros maximus, ut cursus sem euismod. Donec iaculis tristique odio at consectetur. Nullam dignissim varius suscipit. Sed in leo sit amet velit finibus pretium. Vivamus dictum nisi ac fermentum interdum. Vestibulum vel mauris at erat mattis accumsan et ac lorem. Cras non venenatis orci, sed tincidunt massa. Duis nisl lectus, auctor eu sodales at, dignissim eu orci. Sed vitae venenatis magna, in blandit metus. Praesent volutpat cursus rhoncus. Aenean arcu diam, suscipit ac neque in, sollicitudin convallis orci.</p>
-											<p class="tm-box-p">Fusce eu porta massa, sed tincidunt turpis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus a urna tellus. Integer pharetra vitae nisi et lacinia. Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque quis, maximus eget nisi.</p>
-											<a href="#" class="content-link">Read More</a>    
-										</div>                        
-									</div>                    
-								</div>
-							</div>
-						</div>
-					</section>
-					<!-- End Testimornial Area -->
-				</div>
-				<div id="section4">
-						<!-- Contact -->
-						<section class="contact" id="contact">
-						    <div class="container">
-						        <iframe 
-						            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.899581696843!2d110.3928100740499!3d-7.800455306955081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a57669d43fe55%3A0x75fae1bb400d4da5!2sSMA%20Negeri%208%20Yogyakarta!5e0!3m2!1sen!2sid!4v177812659811!5m2!1sen!2sid" 
-						            width="600" 
-						            height="450" 
-						            style="border:0;" 
-						            allowfullscreen="" 
-						            loading="lazy" 
-						            referrerpolicy="no-referrer-when-downgrade">
-						        </iframe>
-						
-						        <div class="contact-grid">
-						            <div class="contact-content">
-						                <p class="text-label">Visit Our Atelier</p>
-						                <h2 class="heading-display contact-title">
-						                    Experience Maison Dorée
-						                </h2>
-						                <p class="text-body contact-text">
-						                    We invite you to visit our atelier for a personal
-						                    consultation. Discover our collections in an intimate
-						                    setting and work with our designers to create something
-						                    truly unique.
-						                </p>
-						            </div>
-						        </div>
-						    </div>
-						</section>
+                        <!-- End Contact Area -->
+                    </div>
 
-						<!-- End Contact Area -->
-					</div>
+                    <!-- Start Footer Area -->
+                    <footer id="footer-area">
+                        <div class="container">
+                            <div class="row text-center">
+                                <div class="col-sm-12">
+                                    <div class="footer-content">
+                                        <h1>Use it free!</h1>
+                                        <p>“Conquer is free Bootstrap template from templatemo website. 
+                                            <br>No backlink is required to use this layout.”</p>
+                                        </div>                
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-12 text-center">             
+                                        <p class="copy">Copyright © 2084 Your Company Name</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                        <!-- End Footer Area -->
 
-					<!-- Start Footer Area -->
-					<footer id="footer-area">
-						<div class="container">
-							<div class="row text-center">
-								<div class="col-sm-12">
-									<div class="footer-content">
-										<h1>Use it free!</h1>
-										<p>“Conquer is free Bootstrap template from templatemo website. 
-											<br>No backlink is required to use this layout.”</p>
-										</div>                
-									</div>
-								</div>
-							</div>
-							<hr>
-							<div class="container">
-								<div class="row">
-									<div class="col-sm-12 text-center">             
-										<p class="copy">Copyright © 2084 Your Company Name</p>
-									</div>
-								</div>
-							</div>
-						</footer>
-						<!-- End Footer Area -->
-
-						<script src="js/jquery-1.11.2.min.js"></script>
-						<script src="js/jquery.scrollUp.min.js"></script> <!-- https://github.com/markgoodyear/scrollup -->
-						<script src="js/jquery.singlePageNav.min.js"></script> <!-- https://github.com/ChrisWojcik/single-page-nav -->
-						<script src="js/parallax.js-1.3.1/parallax.js"></script> <!-- http://pixelcog.github.io/parallax.js/ -->
-						<script>
+                        <script src="js/jquery-1.11.2.min.js"></script>
+                        <script src="js/jquery.scrollUp.min.js"></script>
+                        <script src="js/jquery.singlePageNav.min.js"></script>
+                        <script src="js/parallax.js-1.3.1/parallax.js"></script>
+                        <script>
 
     // HTML document is loaded. DOM is ready.
     $(function() {  
 
     // Parallax
         $('.intro-section').parallax({
-        	imageSrc: 'img/bg-1.jpg',
-        	speed: 0.2
+            imageSrc: 'img/bg-1.jpg',
+            speed: 0.2
         });
         $('.services-section').parallax({
-        	imageSrc: 'img/bg-2.jpg',
-        	speed: 0.2
-    	});
+            imageSrc: 'img/bg-2.jpg',
+            speed: 0.2
+        });
         $('.contact-section').parallax({
-        	imageSrc: 'img/bg-3.jpg',
-        	speed: 0.2
+            imageSrc: 'img/bg-3.jpg',
+            speed: 0.2
         });    
 
         // jQuery Scroll Up / Back To Top Image
         $.scrollUp({
                 scrollName: 'scrollUp',      // Element ID
-		        scrollDistance: 300,         // Distance from top/bottom before showing element (px)
-		        scrollFrom: 'top',           // 'top' or 'bottom'
-		        scrollSpeed: 1000,            // Speed back to top (ms)
-		        easingType: 'linear',        // Scroll to top easing (see http://easings.net/)
-		        animation: 'fade',           // Fade, slide, none
-		        animationSpeed: 300,         // Animation speed (ms)		        
-		        scrollText: '', // Text for element, can contain HTML		        
-		        scrollImg: true            // Set true to use image		        
+                scrollDistance: 300,         // Distance from top/bottom before showing element (px)
+                scrollFrom: 'top',           // 'top' or 'bottom'
+                scrollSpeed: 1000,            // Speed back to top (ms)
+                easingType: 'linear',        // Scroll to top easing (see http://easings.net/)
+                animation: 'fade',           // Fade, slide, none
+                animationSpeed: 300,         // Animation speed (ms)		        
+                scrollText: '', // Text for element, can contain HTML		        
+                scrollImg: true            // Set true to use image		        
             });
 
         // ScrollUp Placement
         $( window ).on( 'scroll', function() {
 
-            // If the height of the document less the height of the document is the same as the
-            // distance the window has scrolled from the top...
             if ( $( document ).height() - $( window ).height() === $( window ).scrollTop() ) {
-
-                // Adjust the scrollUp image so that it's a few pixels above the footer
                 $('#scrollUp').css( 'bottom', '80px' );
-
             } else {      
-                // Otherwise, leave set it to its default value.
                 $('#scrollUp').css( 'bottom', '30px' );        
             }
         });
 
         $('.single-page-nav').singlePageNav({
-        	offset: $('.single-page-nav').outerHeight(),
-        	speed: 1500,
-        	filter: ':not(.external)',
-        	updateHash: true
+            offset: $('.single-page-nav').outerHeight(),
+            speed: 1500,
+            filter: ':not(.external)',
+            updateHash: true
         });
 
         $('.navbar-toggle').click(function(){
-        	$('.single-page-nav').toggleClass('show');
+            $('.single-page-nav').toggleClass('show');
         });
 
         $('.single-page-nav a').click(function(){
-        	$('.single-page-nav').removeClass('show');
+            $('.single-page-nav').removeClass('show');
         });
         
     });
 </script>
-	<script src="login/js/welcome.js"></script>
+    <script src="login/js/welcome.js"></script>
 </body>
 </html>
