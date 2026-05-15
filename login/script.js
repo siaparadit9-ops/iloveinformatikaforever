@@ -2,7 +2,8 @@
 class NeumorphismLoginForm {
     constructor() {
         this.form = document.getElementById('loginForm');
-        this.emailInput = document.getElementById('email'); // Sesuai dengan ID di HTML
+        // DIUBAH: Mengambil input berdasarkan ID 'username'
+        this.usernameInput = document.getElementById('username'); 
         this.passwordInput = document.getElementById('password');
         this.passwordToggle = document.getElementById('passwordToggle');
         this.submitButton = this.form.querySelector('.login-btn');
@@ -21,13 +22,14 @@ class NeumorphismLoginForm {
     
     bindEvents() {
         this.form.addEventListener('submit', (e) => this.handleSubmit(e));
-        this.emailInput.addEventListener('blur', () => this.validateEmail());
+        // DIUBAH: Validasi berdasarkan username
+        this.usernameInput.addEventListener('blur', () => this.validateUsername());
         this.passwordInput.addEventListener('blur', () => this.validatePassword());
-        this.emailInput.addEventListener('input', () => this.clearError('email'));
+        this.usernameInput.addEventListener('input', () => this.clearError('username'));
         this.passwordInput.addEventListener('input', () => this.clearError('password'));
         
         // Add soft press effects to inputs
-        [this.emailInput, this.passwordInput].forEach(input => {
+        [this.usernameInput, this.passwordInput].forEach(input => {
             input.addEventListener('focus', (e) => this.addSoftPress(e));
             input.addEventListener('blur', (e) => this.removeSoftPress(e));
         });
@@ -113,21 +115,16 @@ class NeumorphismLoginForm {
         }, 150);
     }
     
-    validateEmail() {
-        const email = this.emailInput.value.trim();
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // DIUBAH: Mengganti validateEmail dengan validateUsername
+    validateUsername() {
+        const username = this.usernameInput.value.trim();
         
-        if (!email) {
-            this.showError('email', 'Email is required');
+        if (!username) {
+            this.showError('username', 'Username is required');
             return false;
         }
         
-        if (!emailRegex.test(email)) {
-            this.showError('email', 'Please enter a valid email');
-            return false;
-        }
-        
-        this.clearError('email');
+        this.clearError('username');
         return true;
     }
     
@@ -177,10 +174,11 @@ class NeumorphismLoginForm {
     async handleSubmit(e) {
         e.preventDefault();
         
-        const isEmailValid = this.validateEmail();
+        // DIUBAH: Cek validasi username
+        const isUsernameValid = this.validateUsername();
         const isPasswordValid = this.validatePassword();
         
-        if (!isEmailValid || !isPasswordValid) {
+        if (!isUsernameValid || !isPasswordValid) {
             this.animateSoftPress(this.submitButton);
             return;
         }
@@ -191,10 +189,10 @@ class NeumorphismLoginForm {
             // Simulasi cek ke server
             await new Promise(resolve => setTimeout(resolve, 2000));
             
-            // === TAMBAHAN: Simpan status login ke localStorage ===
-            const emailValue = this.emailInput.value.trim();
-            localStorage.setItem('loggedInUser', emailValue);
-            localStorage.setItem('loginType', 'email');
+            // DIUBAH: Simpan username ke localStorage (bukan email lagi)
+            const usernameValue = this.usernameInput.value.trim();
+            localStorage.setItem('loggedInUser', usernameValue);
+            localStorage.setItem('loginType', 'username');
             
             // Tampilkan animasi sukses dan redirect
             this.showNeumorphicSuccess();
@@ -215,11 +213,10 @@ class NeumorphismLoginForm {
         try {
             await new Promise(resolve => setTimeout(resolve, 1500));
             
-            // === TAMBAHAN: Jika Google, simpan status & langsung redirect ===
             if (provider === 'Google') {
                 localStorage.setItem('loggedInUser', 'Google User');
                 localStorage.setItem('loginType', 'google');
-                this.showNeumorphicSuccess(); // Langsung menuju fungsi sukses & redirect
+                this.showNeumorphicSuccess(); 
             } else {
                 console.log(`Redirecting to ${provider} authentication...`);
             }
@@ -259,15 +256,12 @@ class NeumorphismLoginForm {
             
         }, 300);
         
-        // === PERBAIKAN UTAMA: Redirect ke halaman index.html utama ===
         setTimeout(() => {
-            // Karena file ini ada di dalam folder "login", kita pakai ../index.html
             window.location.href = '../index.html';
         }, 2500);
     }
 }
 
-// Add custom animations
 if (!document.querySelector('#neu-keyframes')) {
     const style = document.createElement('style');
     style.id = 'neu-keyframes';
