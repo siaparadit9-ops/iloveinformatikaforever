@@ -136,8 +136,9 @@ class NeumorphismLoginForm {
             return false;
         }
         
-        if (password.length < 6) {
-            this.showError('password', 'Password must be at least 6 characters');
+        // DIUBAH: Mengubah batas minimal panjang karakter menjadi kurang dari 3
+        if (password.length < 3) {
+            this.showError('password', 'Password must be at least 3 characters');
             return false;
         }
         
