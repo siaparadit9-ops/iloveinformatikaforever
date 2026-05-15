@@ -23,19 +23,19 @@
             </div>
             
             <form class="login-form" id="loginForm" novalidate>
+                <!-- BAGIAN YANG DIUBAH: Email menjadi Username -->
                 <div class="form-group">
                     <div class="input-group neu-input">
-                        <!-- DIUBAH: id="username" menjadi id="email" agar cocok dengan JS -->
-                        <input type="email" id="email" name="email" required autocomplete="email" placeholder=" ">
-                        <label for="email">Email</label>
+                        <input type="text" id="username" name="username" required autocomplete="username" placeholder=" ">
+                        <label for="username">Username</label>
                         <div class="input-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                <polyline points="22,6 12,13 2,6"/>
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
                             </svg>
                         </div>
                     </div>
-                    <span class="error-message" id="emailError"></span>
+                    <span class="error-message" id="usernameError"></span>
                 </div>
 
                 <div class="form-group">
@@ -94,7 +94,6 @@
             </div>
 
             <div class="social-login">
-                <!-- Tombol Google dibiarkan seperti awal, prosesnya ada di JS -->
                 <button type="button" class="social-btn neu-social" id="googleLoginBtn">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                         <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -132,7 +131,6 @@
     </div>
 
     <script src="../../shared/js/form-utils.js"></script>
-    <!-- PERHATIAN: Kode JS di bawah ini yang akan kita ganti -->
     <script src="script.js"></script>
     <script src="js/login.js"></script>
     
