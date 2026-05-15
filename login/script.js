@@ -2,7 +2,7 @@
 class NeumorphismLoginForm {
     constructor() {
         this.form = document.getElementById('loginForm');
-        this.emailInput = document.getElementById('email');
+        this.emailInput = document.getElementById('email'); // Sesuai dengan ID di HTML
         this.passwordInput = document.getElementById('password');
         this.passwordToggle = document.getElementById('passwordToggle');
         this.submitButton = this.form.querySelector('.login-btn');
@@ -39,8 +39,6 @@ class NeumorphismLoginForm {
             this.passwordInput.type = type;
             
             this.passwordToggle.classList.toggle('show-password', type === 'text');
-            
-            // Add soft click animation
             this.animateSoftPress(this.passwordToggle);
         });
     }
@@ -50,7 +48,6 @@ class NeumorphismLoginForm {
             button.addEventListener('click', (e) => {
                 this.animateSoftPress(button);
                 
-                // Determine which social platform based on SVG content
                 const svgPath = button.querySelector('svg path').getAttribute('d');
                 let provider = 'Social';
                 if (svgPath.includes('22.56')) provider = 'Google';
@@ -63,19 +60,16 @@ class NeumorphismLoginForm {
     }
     
     setupNeumorphicEffects() {
-        // Add hover effects to all neumorphic elements
         const neuElements = document.querySelectorAll('.neu-icon, .neu-checkbox, .neu-social');
         neuElements.forEach(element => {
             element.addEventListener('mouseenter', () => {
                 element.style.transform = 'scale(1.05)';
             });
-            
             element.addEventListener('mouseleave', () => {
                 element.style.transform = 'scale(1)';
             });
         });
         
-        // Add ambient light effect on mouse move
         document.addEventListener('mousemove', (e) => {
             this.updateAmbientLight(e);
         });
@@ -104,12 +98,12 @@ class NeumorphismLoginForm {
     
     addSoftPress(e) {
         const inputGroup = e.target.closest('.neu-input');
-        inputGroup.style.transform = 'scale(0.98)';
+        if(inputGroup) inputGroup.style.transform = 'scale(0.98)';
     }
     
     removeSoftPress(e) {
         const inputGroup = e.target.closest('.neu-input');
-        inputGroup.style.transform = 'scale(1)';
+        if(inputGroup) inputGroup.style.transform = 'scale(1)';
     }
     
     animateSoftPress(element) {
@@ -162,7 +156,6 @@ class NeumorphismLoginForm {
         errorElement.textContent = message;
         errorElement.classList.add('show');
         
-        // Add gentle shake animation
         const input = document.getElementById(field);
         input.style.animation = 'gentleShake 0.5s ease-in-out';
         setTimeout(() => {
@@ -195,11 +188,17 @@ class NeumorphismLoginForm {
         this.setLoading(true);
         
         try {
-            // Simulate soft authentication
+            // Simulasi cek ke server
             await new Promise(resolve => setTimeout(resolve, 2000));
             
-            // Show neumorphic success
+            // === TAMBAHAN: Simpan status login ke localStorage ===
+            const emailValue = this.emailInput.value.trim();
+            localStorage.setItem('loggedInUser', emailValue);
+            localStorage.setItem('loginType', 'email');
+            
+            // Tampilkan animasi sukses dan redirect
             this.showNeumorphicSuccess();
+            
         } catch (error) {
             this.showError('password', 'Login failed. Please try again.');
         } finally {
@@ -210,14 +209,21 @@ class NeumorphismLoginForm {
     async handleSocialLogin(provider, button) {
         console.log(`Initiating ${provider} login...`);
         
-        // Add loading state to button
         button.style.pointerEvents = 'none';
         button.style.opacity = '0.7';
         
         try {
             await new Promise(resolve => setTimeout(resolve, 1500));
-            console.log(`Redirecting to ${provider} authentication...`);
-            // window.location.href = `/auth/${provider.toLowerCase()}`;
+            
+            // === TAMBAHAN: Jika Google, simpan status & langsung redirect ===
+            if (provider === 'Google') {
+                localStorage.setItem('loggedInUser', 'Google User');
+                localStorage.setItem('loginType', 'google');
+                this.showNeumorphicSuccess(); // Langsung menuju fungsi sukses & redirect
+            } else {
+                console.log(`Redirecting to ${provider} authentication...`);
+            }
+            
         } catch (error) {
             console.error(`${provider} authentication failed: ${error.message}`);
         } finally {
@@ -230,7 +236,6 @@ class NeumorphismLoginForm {
         this.submitButton.classList.toggle('loading', loading);
         this.submitButton.disabled = loading;
         
-        // Disable social buttons during login
         this.socialButtons.forEach(button => {
             button.style.pointerEvents = loading ? 'none' : 'auto';
             button.style.opacity = loading ? '0.6' : '1';
@@ -238,7 +243,6 @@ class NeumorphismLoginForm {
     }
     
     showNeumorphicSuccess() {
-        // Soft fade out form
         this.form.style.transform = 'scale(0.95)';
         this.form.style.opacity = '0';
         
@@ -246,20 +250,19 @@ class NeumorphismLoginForm {
             this.form.style.display = 'none';
             document.querySelector('.social-login').style.display = 'none';
             document.querySelector('.signup-link').style.display = 'none';
+            document.querySelector('.divider').style.display = 'none';
             
-            // Show success with soft animation
             this.successMessage.classList.add('show');
             
-            // Animate success icon
             const successIcon = this.successMessage.querySelector('.neu-icon');
             successIcon.style.animation = 'successPulse 0.6s ease-out';
             
         }, 300);
         
-        // Simulate redirect
+        // === PERBAIKAN UTAMA: Redirect ke halaman index.html utama ===
         setTimeout(() => {
-            console.log('Redirecting to dashboard...');
-            // window.location.href = '/dashboard';
+            // Karena file ini ada di dalam folder "login", kita pakai ../index.html
+            window.location.href = '../index.html';
         }, 2500);
     }
 }
@@ -284,7 +287,6 @@ if (!document.querySelector('#neu-keyframes')) {
     document.head.appendChild(style);
 }
 
-// Initialize the form when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new NeumorphismLoginForm();
 });
