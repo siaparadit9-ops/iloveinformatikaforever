@@ -94,17 +94,29 @@ z-index: 999;
 .main-menu ul li a:hover {
   background: #49505F;
 }
+
+/* PERUBAHAN FONT JUDUL UNTUK TAMPILAN KOMPUTER */
 .header-content  h1 {
+  font-family: 'Playfair Display', serif; /* Font baru */
   color: #fff;
   font-size: 70px;
+  font-weight: 900; /* Ketebalan baru */
   text-transform: uppercase;
-  text-shadow: 2px 2px #000;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.5); /* Bayangan baru lebih lembut */
+  letter-spacing: 2px; /* Jarak antar huruf baru */
+  line-height: 1.1;
 }
 .header-content h4 {
+  font-family: 'Poppins', sans-serif; /* Font baru */
   color: #fff;
-  font-size: 25px;
-  text-shadow: 1px 1px #333;
+  font-size: 22px; /* Ukuran dikecilkan sedikit */
+  font-weight: 300; /* Ketebalan tipis baru */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Bayangan baru lebih lembut */
+  letter-spacing: 1px; /* Jarak antar huruf baru */
+  margin-top: 20px;
 }
+/* AKHIR PERUBAHAN FONT JUDUL */
+
 .single-page-nav { text-align: center; }
 /* End Header CSS */
 
@@ -563,9 +575,20 @@ input {
     z-index: 999;
     background:none;
   }
+
+  /* PERUBAHAN FONT JUDUL UNTUK TAMPILAN HP */
   .header-content h1 {
-   font-size: 55px;
+   font-size: 38px; /* Diperkecil dari 55px agar muat dengan font baru */
+   letter-spacing: 1px;
+   line-height: 1.1;
   }
+  .header-content h4 {
+   font-size: 16px;
+   margin-top: 15px;
+   line-height: 1.4;
+  }
+  /* AKHIR PERUBAHAN FONT JUDUL HP */
+
   .feature-content {
     max-width: 360px;
     margin: 0 auto 30px;
@@ -640,11 +663,11 @@ input {
       text-align: center;
   }
   /* Style tombol Instagram di layar HP */
-.navbar-inverse .navbar-nav > li > a.instagram-btn {
-    border-radius: 30px;
-    margin: 5px 0;
-    text-align: center;
-}
+  .navbar-inverse .navbar-nav > li > a.instagram-btn {
+      border-radius: 30px;
+      margin: 5px 0;
+      text-align: center;
+  }
   /* ===== AKHIR TAMBAHAN CSS MOBILE ===== */
 
   .container {
