@@ -1,3 +1,4 @@
+<!-- Nama File: login.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +24,6 @@
             </div>
             
             <form class="login-form" id="loginForm" novalidate>
-                <!-- BAGIAN YANG DIUBAH: Email menjadi Username -->
                 <div class="form-group">
                     <div class="input-group neu-input">
                         <input type="text" id="username" name="username" required autocomplete="username" placeholder=" ">
@@ -125,14 +125,47 @@
                     </svg>
                 </div>
                 <h3>Berhasil!</h3>
-                <p>Redirecting to your dashboard...</p>
+                <p>Redirecting to homepage...</p>
             </div>
         </div>
     </div>
 
     <script src="../../shared/js/form-utils.js"></script>
     <script src="script.js"></script>
-    <script src="js/login.js"></script>
-    
+    <!-- Script Login Kustom -->
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Mencegah reload
+
+            const inputUsername = document.getElementById('username').value;
+            const inputPassword = document.getElementById('password').value;
+
+            // Ambil data dari localStorage
+            const data = localStorage.getItem('registeredUser');
+
+            if(data) {
+                const user = JSON.parse(data);
+                
+                // Cek apakah username dan password cocok
+                if(user.username === inputUsername && user.password === inputPassword) {
+                    // Set status login menjadi true
+                    localStorage.setItem('isLoggedIn', 'true');
+                    localStorage.setItem('currentUser', inputUsername);
+
+                    // Tampilkan pesan sukses
+                    document.getElementById('successMessage').style.display = 'flex';
+
+                    // Arahkan ke halaman utama website setelah 1.5 detik
+                    setTimeout(function() {
+                        window.location.href = 'index.html';
+                    }, 1500);
+                } else {
+                    alert('Username atau Password salah!');
+                }
+            } else {
+                alert('Belum ada akun terdaftar. Silakan Sign Up terlebih dahulu.');
+            }
+        });
+    </script>
 </body>
 </html>
