@@ -1,10 +1,9 @@
-<!-- Nama File: register.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neumorphism Register Form</title>
+    <title>Neumorphism Login Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -37,7 +36,7 @@
                     </div>
                     <span class="error-message" id="usernameError"></span>
                 </div>
-                <div class="form-group">
+<div class="form-group">
                     <div class="input-group neu-input">
                         <input type="email" id="email" name="email" required autocomplete="email" placeholder=" ">
                         <label for="email">email</label>
@@ -48,6 +47,7 @@
                             </svg>
                         </div>
                     </div>
+            
                 </div>
                 <div class="form-group">
                     <div class="input-group neu-input password-group">
@@ -89,7 +89,7 @@
                 </div>
 
                 <button type="submit" class="neu-button login-btn">
-                    <span class="btn-text">Sign Up</span>
+                    <span class="btn-text">Login</span>
                     <div class="btn-loader">
                         <div class="neu-spinner"></div>
                     </div>
@@ -126,8 +126,7 @@
             </div>
 
             <div class="signup-link">
-                <!-- DIUBAH: Mengarah ke login.html bukan index.html -->
-                <p>Sudah Mempunyai Akun? <a href="login.html">Sign in</a></p>
+                <p>Tidak Mempunyai Akun? <a href="index.html">Sign in</a></p>
             </div>
 
             <div class="success-message" id="successMessage">
@@ -137,40 +136,14 @@
                     </svg>
                 </div>
                 <h3>Berhasil!</h3>
-                <p>Redirecting to login page...</p>
+                <p>Redirecting to your dashboard...</p>
             </div>
         </div>
     </div>
 
     <script src="../../shared/js/form-utils.js"></script>
     <script src="script.js"></script>
-    <!-- Script Register Kustom -->
-    <script>
-        document.getElementById('registerForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Mencegah reload halaman
-
-            const username = document.getElementById('username').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-
-            if(username && email && password) {
-                // Simpan data ke localStorage browser
-                const userData = {
-                    username: username,
-                    email: email,
-                    password: password
-                };
-                localStorage.setItem('registeredUser', JSON.stringify(userData));
-
-                // Tampilkan pesan sukses (bawaan template Anda)
-                document.getElementById('successMessage').style.display = 'flex';
-
-                // Arahkan ke halaman Login setelah 1.5 detik
-                setTimeout(function() {
-                    window.location.href = 'login.html';
-                }, 1500);
-            }
-        });
-    </script>
+    <script src="js/register.js" defer></script>
+    
 </body>
 </html>
